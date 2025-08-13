@@ -1,0 +1,96 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* Main Content Styling */
+main {
+    padding-top: 80px; /* Space for the fixed navbar */
+}
+
+
+section {
+    min-height: 100vh; /* Make sections full-height to enable scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+#section1 { background-color: #054176; }
+#section2 { background-color: #095133; }
+#section3 { background-color: #5c221c; }
+#contact { background-color: #6d6d21; }
+
+
+/* Navbar Styling */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: transparent; /* Initial transparent background */
+    color: rgb(29, 89, 138);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;
+}
+
+
+#navbar.scrolled {
+    background-color: #d80909; /* New background on scroll */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+#navbar.scrolled .logo,
+#navbar.scrolled ul li a {
+    color: #333; /* New text color on scroll */
+}
+
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+ul li {
+    margin-left: 25px;
+}
+
+
+ul li a {
+    text-decoration: none;
+    color: rgb(141, 44, 44); /* Ensure initial color is visible */
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transition for background too */
+    padding: 10px 15px; /* Increase padding for better touch area */
+    border-radius: 5px;
+}
+
+
+/* Hover effect - more pronounced */
+ul li a:hover {
+    color: #ffffff; /* White text on hover */
+    background-color: #007bff; /* Blue background on hover */
+}
